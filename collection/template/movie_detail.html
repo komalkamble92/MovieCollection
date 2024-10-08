@@ -1,0 +1,16 @@
+<!-- templates/movies/movie_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ movie.title }}</title>
+</head>
+<body>
+    <h1>{{ movie.title }}</h1>
+    <p><strong>Director:</strong> {{ movie.director }}</p>
+    <p><strong>Release Date:</strong> {{ movie.release_date }}</p>
+    <p><strong>Genre:</strong> {{ movie.genre }}</p>
+    <p><strong>Description:</strong> {{ movie.description }}</p>
+    <a href="{% url 'movie_list' %}">Back to list</a>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<!-- movie_list.html -->
+<h1>Movie Collection</h1>
+<a href="{% url 'movie_add' %}">Add a new movie</a>
+<ul>
+    {% for movie in movies %}
+        <li>
+            <a href="{% url 'movie_detail' movie.id %}">{{ movie.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
