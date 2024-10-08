@@ -4,7 +4,13 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Movie
 from .forms import MovieForm
+from rest_framework import viewsets
+#from .models import Movie
+from .serializers import MovieSerializer
 
+# class MovieViewSet(viewsets.ModelViewSet):
+#     queryset = Movie.objects.all()
+#     serializer_class = MovieSerializer
 def movie_list(request):
     movies = Movie.objects.all()
     return render(request, 'movie_list.html', {'movies': movies})
@@ -22,3 +28,4 @@ def movie_add(request):
     else:
         form = MovieForm()
     return render(request, 'movie_form.html', {'form': form})
+
