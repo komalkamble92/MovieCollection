@@ -18,13 +18,13 @@ urlpatterns = [
     path('movie/<int:movie_id>/', movie_detail, name='movie_detail'),
     path('movie/add/', movie_add, name='movie_add'),
 
-    # path('movielist/',movie_list.as_view(),name='movielist'),
+    # # path('movielist/',movie_list.as_view(),name='movielist'),
     # path('moviedetail/',movie_detail.as_view(),name='moviedetail'),
     # path('movieadd/',movie_add.as_view(),name='movieadd')
-    #router == DefaultRouter(),
-    #router.register(r'movies', MovieViewSet),
+    # router == DefaultRouter(),
+    # router.register(r'movies', MovieViewSet),
 
-    #path('', include('.urls')),
+    # path('', include('router.urls')),
 
 
 
